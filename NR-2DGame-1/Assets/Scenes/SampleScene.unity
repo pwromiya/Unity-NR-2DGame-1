@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 58248452}
   - component: {fileID: 58248451}
   - component: {fileID: 58248450}
+  - component: {fileID: 58248453}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -155,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: -189.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -178.91, y: -72.38}
+  m_SizeDelta: {x: 256.18, y: 112.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58248450
 MonoBehaviour:
@@ -240,6 +241,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58248448}
   m_CullTransparentMesh: 1
+--- !u!114 &58248453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58248448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d305e00aee2ce464fbf770a268844355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buton: {fileID: 58248448}
 --- !u!1 &66100423
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,11 +536,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -534,7 +548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: nazhmi
 --- !u!222 &567811105
 CanvasRenderer:
   m_ObjectHideFlags: 0
