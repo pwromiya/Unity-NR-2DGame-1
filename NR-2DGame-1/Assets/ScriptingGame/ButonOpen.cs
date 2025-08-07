@@ -2,17 +2,22 @@ using UnityEngine;
 
 public class ButonOpen : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public HeroHealth target;
 
     [SerializeField] private GameObject buton;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    // Метод, который будет вызываться при нажатии кнопки
+    public void OnButtonClick()
     {
-        Debug.Log("privet ");
+        Debug.Log("Кнопка нажата! Наносим урон.");
+        if (target != null)
+        {
+            target.TakeDamage(12.6f);
+        }
+        else
+        {
+            Debug.LogWarning("Target не установлен!");
+        }
     }
 }
+ 
