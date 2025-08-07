@@ -7,6 +7,7 @@ public class HeroControl : MonoBehaviour
     [SerializeField] private float moveSpeed = 2.1f;                       //скорость передвижния персонажа 
     [SerializeField] private float jumpForse = 3.0f;
 
+
     [Header("Ground Check Settings")]
     public Transform groundCheck;
     private float GroundRadius = 0.3f;
@@ -28,14 +29,19 @@ public class HeroControl : MonoBehaviour
         HeroMovent();
         JumpHeroMovent();
         HeroFlip();
+        
     }
 
 
     private void HeroMovent()
     {
         float moveInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocityY);
+        float SprintSpeed = Input.GetKey(KeyCode.LeftShift) ? 1.5f : 1.0f ;
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed *SprintSpeed, rb.linearVelocityY);
+        Debug.Log($"скорость = {moveSpeed * SprintSpeed}");
     }
+
+    
 
     private void JumpHeroMovent()
     {
